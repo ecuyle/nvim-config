@@ -58,6 +58,7 @@ return packer.startup(function(use)
 	use { "folke/which-key.nvim" }
   use { "karb94/neoscroll.nvim", commit = "54c5c419f6ee2b35557b3a6a7d631724234ba97a" }
   use { "nacro90/numb.nvim", commit = "d95b7ea62e320b02ca1aa9df3635471a88d6f3b1" }
+  use { "folke/trouble.nvim", commit = "897542f90050c3230856bc6e45de58b94c700bbf" }
 
 	-- Colorschemes
   use { "folke/tokyonight.nvim", commit = "66bfc2e8f754869c7b651f3f47a2ee56ae557764" }
