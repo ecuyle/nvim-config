@@ -89,11 +89,15 @@ local mappings = {
   ["q"] = { "<cmd>q!<CR>", "Quit" },
   ["c"] = { "<cmd>Bdelete!<CR>", "Close Buffer" },
   ["h"] = { "<cmd>nohlsearch<CR>", "No Highlight" },
-  ["f"] = {
-    "<cmd>lua require('telescope.builtin').find_files(require('telescope.themes').get_dropdown{previewer = false})<cr>",
-    "Find files",
+
+  f = {
+    name = "Find",
+    f = { "<cmd>lua require('telescope.builtin').find_files(require('telescope.themes').get_dropdown{previewer = false})<cr>", "Find files" },
+    t = { "<cmd>Telescope live_grep theme=ivy<cr>", "Find Text" },
+    p = { ":Telescope projects<CR>", "Find Project" },
+    b = { ":Telescope buffers<CR>", "Find Buffer" },
   },
-  ["F"] = { "<cmd>Telescope live_grep theme=ivy<cr>", "Find Text" },
+
   ["P"] = { "<cmd>lua require('telescope').extensions.projects.projects()<cr>", "Projects" },
 
   p = {
@@ -161,26 +165,37 @@ local mappings = {
   },
   s = {
     name = "Search",
+    C = { "<cmd>Telescope commands<cr>", "Commands" },
+    M = { "<cmd>Telescope man_pages<cr>", "Man Pages" },
+    R = { "<cmd>Telescope registers<cr>", "Registers" },
     b = { "<cmd>Telescope git_branches<cr>", "Checkout branch" },
     c = { "<cmd>Telescope colorscheme<cr>", "Colorscheme" },
     h = { "<cmd>Telescope help_tags<cr>", "Find Help" },
-    M = { "<cmd>Telescope man_pages<cr>", "Man Pages" },
-    r = { "<cmd>Telescope oldfiles<cr>", "Open Recent File" },
-    R = { "<cmd>Telescope registers<cr>", "Registers" },
     k = { "<cmd>Telescope keymaps<cr>", "Keymaps" },
-    C = { "<cmd>Telescope commands<cr>", "Commands" },
+    r = { "<cmd>Telescope oldfiles<cr>", "Open Recent File" },
   },
 
   t = {
     name = "Terminal",
-    n = { "<cmd>lua _NODE_TOGGLE()<cr>", "Node" },
-    u = { "<cmd>lua _NCDU_TOGGLE()<cr>", "NCDU" },
-    t = { "<cmd>lua _HTOP_TOGGLE()<cr>", "Htop" },
-    p = { "<cmd>lua _PYTHON_TOGGLE()<cr>", "Python" },
     f = { "<cmd>ToggleTerm direction=float<cr>", "Float" },
     h = { "<cmd>ToggleTerm size=10 direction=horizontal<cr>", "Horizontal" },
+    n = { "<cmd>lua _NODE_TOGGLE()<cr>", "Node" },
+    p = { "<cmd>lua _PYTHON_TOGGLE()<cr>", "Python" },
+    t = { "<cmd>lua _HTOP_TOGGLE()<cr>", "Htop" },
+    u = { "<cmd>lua _NCDU_TOGGLE()<cr>", "NCDU" },
     v = { "<cmd>ToggleTerm size=80 direction=vertical<cr>", "Vertical" },
   },
+
+  x = {
+    name = "Trouble",
+    d = { "<cmd>TroubleToggle document_diagnostics<cr>", "Document Diagnostics" },
+    l = { "<cmd>TroubleToggle loclist<cr>", "Loc List" },
+    q = { "<cmd>TroubleToggle quickfix<cr>", "Quickfix" },
+    r = { "<cmd>TroubleToggle lsp_references<cr>", "LSP References" },
+    w = { "<cmd>TroubleToggle workspace_diagnostics<cr>", "Workspace Diagnostics" },
+    x = { "<cmd>TroubleToggle<cr>", "Toggle Trouble" },
+  }
+
 }
 
 which_key.setup(setup)

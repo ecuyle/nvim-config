@@ -59,15 +59,14 @@ return packer.startup(function(use)
   use { "karb94/neoscroll.nvim", commit = "54c5c419f6ee2b35557b3a6a7d631724234ba97a" }
   use { "nacro90/numb.nvim", commit = "d95b7ea62e320b02ca1aa9df3635471a88d6f3b1" }
   use { "folke/trouble.nvim", commit = "897542f90050c3230856bc6e45de58b94c700bbf" }
+  use { "theprimeagen/harpoon", commit = "21d0d1bfa3000e4384740bfaefa0ebc51c773786" }
 
 	-- Colorschemes
   use { "folke/tokyonight.nvim", commit = "66bfc2e8f754869c7b651f3f47a2ee56ae557764" }
   use { "lunarvim/darkplus.nvim", commit = "13ef9daad28d3cf6c5e793acfc16ddbf456e1c83" }
-  use { "navarasu/onedark.nvim", commit = "64fc4bc348e52e8e578beca26021d47c4d272a2a" }
+  use { "navarasu/onedark.nvim", commit = "89dde4963ad198c9b6144dee3d5e8bcbb7559ddc" }
   use { "sainnhe/gruvbox-material", commit = "af9a1d60ca4d7e2ca34c55c46d1dbea0769d9244" }
   use { "norcalli/nvim-colorizer.lua", commit = "36c610a9717cc9ec426a07c8e6bf3b3abcb139d6" }
-
-	-- Cmp 
 
 	-- Snippets
   use { "L3MON4D3/LuaSnip", commit = "8f8d493e7836f2697df878ef9c128337cbf2bb84" } --snippet engine
@@ -94,7 +93,7 @@ return packer.startup(function(use)
       {'L3MON4D3/LuaSnip'},
       {'rafamadriz/friendly-snippets'},
     }
-  } 
+  }
 
   use { "jose-elias-alvarez/null-ls.nvim", commit = "c0c19f32b614b3921e17886c541c13a72748d450" } -- for formatters and linters
   use { "RRethy/vim-illuminate", commit = "a2e8476af3f3e993bb0d6477438aad3096512e42" }
@@ -110,6 +109,7 @@ return packer.startup(function(use)
 
 	-- Git
 	use { "lewis6991/gitsigns.nvim", commit = "2c6f96dda47e55fa07052ce2e2141e8367cbaaf2" }
+  use { "sindrets/diffview.nvim", commit = "aeca09694168f4800add10f2d031b372aa5c693d" }
 
 	-- Automatically set up your configuration after cloning packer.nvim
 	-- Put this at the end after all plugins
