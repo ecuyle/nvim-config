@@ -60,6 +60,7 @@ return packer.startup(function(use)
   use { "nacro90/numb.nvim", commit = "d95b7ea62e320b02ca1aa9df3635471a88d6f3b1" }
   use { "folke/trouble.nvim", commit = "897542f90050c3230856bc6e45de58b94c700bbf" }
   use { "theprimeagen/harpoon", commit = "21d0d1bfa3000e4384740bfaefa0ebc51c773786" }
+  use { "mbbill/undotree", commit = "1a23ea84bd02c34f50d8e10a8b4bfc89597ffe4e" }
 
 	-- Colorschemes
   use { "folke/tokyonight.nvim", commit = "66bfc2e8f754869c7b651f3f47a2ee56ae557764" }

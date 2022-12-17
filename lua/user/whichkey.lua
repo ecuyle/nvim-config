@@ -193,6 +193,8 @@ local mappings = {
     v = { "<cmd>ToggleTerm size=80 direction=vertical<cr>", "Vertical" },
   },
 
+  u = { "<cmd>lua vim.cmd.UndotreeToggle()<CR>", "UndoTree Toggle" },
+
   x = {
     name = "Trouble",
     d = { "<cmd>TroubleToggle document_diagnostics<cr>", "Document Diagnostics" },
