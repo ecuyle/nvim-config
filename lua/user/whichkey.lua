@@ -163,6 +163,13 @@ local mappings = {
       "Workspace Symbols",
     },
   },
+  
+  m = {
+    name = "Harpoon (marks)",
+    a = { "<cmd>lua require('harpoon.mark').add_file()<CR>", "Add File Mark" },
+    m = { "<cmd>lua require('harpoon.ui').toggle_quick_menu()<CR>", "Add File Mark" },
+  },
+
   s = {
     name = "Search",
     C = { "<cmd>Telescope commands<cr>", "Commands" },
