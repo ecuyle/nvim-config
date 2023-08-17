@@ -1,4 +1,3 @@
--- require "user.lsp.gopls"
 -- require'lspconfig'.tsserver.setup{}
 
 require("user.lsp.mason")
