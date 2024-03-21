@@ -37,7 +37,7 @@ require("lazy").setup({
 
 			-- Useful status updates for LSP
 			-- NOTE: `opts = {}` is the same as calling `require('fidget').setup({})`
-			{ "j-hui/fidget.nvim", opts = {} },
+			-- { "j-hui/fidget.nvim", opts = {} },
 
 			-- Additional lua configuration, makes nvim stuff amazing!
 			"folke/neodev.nvim",
@@ -104,25 +104,30 @@ require("lazy").setup({
 	{ "JoosepAlviste/nvim-ts-context-commentstring", commit = "4d3a68c41a53add8804f471fcc49bb398fe8de08" },
 	{ "nvim-tree/nvim-web-devicons" },
 	{ "nvim-tree/nvim-tree.lua" },
-	{ "akinsho/bufferline.nvim", version = "*", dependencies="nvim-tree/nvim-web-devicons" },
-	{ "moll/vim-bbye",                               commit = "25ef93ac5a87526111f43e5110675032dbcacf56" },
-	{ "nvim-lualine/lualine.nvim",                   commit = "a52f078026b27694d2290e34efa61a6e4a690621" },
-	{ "akinsho/toggleterm.nvim",                     commit = "2a787c426ef00cb3488c11b14f5dcf892bbd0bda" },
-	{ "ahmedkhalf/project.nvim",                     commit = "628de7e433dd503e782831fe150bb750e56e55d6" },
-	{ "lewis6991/impatient.nvim",                    commit = "b842e16ecc1a700f62adb9802f8355b99b52a5a6" },
-	{ "goolord/alpha-nvim",                          commit = "0bb6fc0646bcd1cdb4639737a1cee8d6e08bcc31" },
-	{ "karb94/neoscroll.nvim",                       commit = "54c5c419f6ee2b35557b3a6a7d631724234ba97a" },
-	{ "nacro90/numb.nvim",                           commit = "d95b7ea62e320b02ca1aa9df3635471a88d6f3b1" },
-	{ "folke/trouble.nvim",                          commit = "897542f90050c3230856bc6e45de58b94c700bbf" },
+	{
+		"akinsho/bufferline.nvim",
+		version = "*",
+		dependencies =
+		"nvim-tree/nvim-web-devicons"
+	},
+	{ "moll/vim-bbye",               commit = "25ef93ac5a87526111f43e5110675032dbcacf56" },
+	{ "nvim-lualine/lualine.nvim",   commit = "a52f078026b27694d2290e34efa61a6e4a690621" },
+	{ "akinsho/toggleterm.nvim",     commit = "2a787c426ef00cb3488c11b14f5dcf892bbd0bda" },
+	{ "ahmedkhalf/project.nvim",     commit = "628de7e433dd503e782831fe150bb750e56e55d6" },
+	{ "lewis6991/impatient.nvim",    commit = "b842e16ecc1a700f62adb9802f8355b99b52a5a6" },
+	{ "goolord/alpha-nvim",          commit = "0bb6fc0646bcd1cdb4639737a1cee8d6e08bcc31" },
+	{ "karb94/neoscroll.nvim",       commit = "54c5c419f6ee2b35557b3a6a7d631724234ba97a" },
+	{ "nacro90/numb.nvim",           commit = "d95b7ea62e320b02ca1aa9df3635471a88d6f3b1" },
+	{ "folke/trouble.nvim",          commit = "897542f90050c3230856bc6e45de58b94c700bbf" },
 
 	-- Colorschemes
-	{ "folke/tokyonight.nvim",                       commit = "66bfc2e8f754869c7b651f3f47a2ee56ae557764" },
-	{ "lunarvim/darkplus.nvim",                      commit = "13ef9daad28d3cf6c5e793acfc16ddbf456e1c83" },
-	{ "navarasu/onedark.nvim",                       commit = "64fc4bc348e52e8e578beca26021d47c4d272a2a" },
-	{ "sainnhe/gruvbox-material",                    commit = "af9a1d60ca4d7e2ca34c55c46d1dbea0769d9244" },
-	{ "norcalli/nvim-colorizer.lua",                 commit = "36c610a9717cc9ec426a07c8e6bf3b3abcb139d6" },
-	{ "rose-pine/neovim",                            name = "rose-pine" },
-	{ "ecuyle/ecmax",                                name = "ecmax" },
+	{ "folke/tokyonight.nvim",       commit = "66bfc2e8f754869c7b651f3f47a2ee56ae557764" },
+	{ "lunarvim/darkplus.nvim",      commit = "13ef9daad28d3cf6c5e793acfc16ddbf456e1c83" },
+	{ "navarasu/onedark.nvim",       commit = "64fc4bc348e52e8e578beca26021d47c4d272a2a" },
+	{ "sainnhe/gruvbox-material",    commit = "af9a1d60ca4d7e2ca34c55c46d1dbea0769d9244" },
+	{ "norcalli/nvim-colorizer.lua", commit = "36c610a9717cc9ec426a07c8e6bf3b3abcb139d6" },
+	{ "rose-pine/neovim",            name = "rose-pine" },
+	{ "ecuyle/ecmax",                name = "ecmax" },
 
 	-- Cmp
 	{
