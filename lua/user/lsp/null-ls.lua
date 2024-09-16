@@ -12,9 +12,18 @@ null_ls.setup({
 	debug = false,
 	sources = {
 		formatting.prettier,
-		formatting.black.with({ extra_args = { "--fast" } }),
+		formatting.black,
 		formatting.stylua,
 		formatting.gofmt,
-		-- diagnostics.flake8
+		-- diagnostics.flake8,
 	},
+	autostart = true, -- Ensure this is set to true if you want autostart
+	on_attach = function(client, bufnr)
+		if client.server_capabilities.documentFormattingProvider then
+			vim.api.nvim_command([[augroup Format]])
+			vim.api.nvim_command([[autocmd! * <buffer>]])
+			vim.api.nvim_command([[autocmd BufWritePre <buffer> lua vim.lsp.buf.format()]])
+			vim.api.nvim_command([[augroup END]])
+		end
+	end,
 })
